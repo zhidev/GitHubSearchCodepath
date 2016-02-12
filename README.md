@@ -12,13 +12,8 @@ The following **required** functionality is completed:
 - [ ] User can search for a specfic repo
 
 
-## Video Walkthrough 
+## Video <a href:"https://www.youtube.com/watch?v=hRFsmlNtYww">Tutorial</a> for CodePath apprentices
 
-Here's a walkthrough of implemented user stories:
-
-<img src='https://www.youtube.com/watch?v=hRFsmlNtYww' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
