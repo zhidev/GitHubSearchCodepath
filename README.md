@@ -12,8 +12,8 @@ The following **required** functionality is completed:
 - [ ] User can search for a specfic repo
 
 
-## Video <a href:"https://www.youtube.com/watch?v=hRFsmlNtYww">Tutorial</a> for CodePath apprentices
-
+## Video Tutorial for CodePath apprentices
+("https://www.youtube.com/watch?v=hRFsmlNtYww")
 
 ## Notes
 
