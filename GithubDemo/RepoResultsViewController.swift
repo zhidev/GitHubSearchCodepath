@@ -10,8 +10,14 @@ import UIKit
 import MBProgressHUD
 import AFNetworking
 
+protocol SettingsPresentingViewControllerDelegate: class {
+    func didSaveSettings(settings: GithubRepoSearchSettings)
+    func didCancelSettings()
+}
+
+
 // Main ViewController
-class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RepoResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SettingsPresentingViewControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var searchBar: UISearchBar!
@@ -121,4 +127,23 @@ extension RepoResultsViewController: UISearchBarDelegate {
         doSearch()
     }
     
+    
+// Segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let navController = segue.destinationViewController as! UINavigationController
+        let vc = navController.topViewController as! SearchSettingsViewController
+        vc.settings = searchSettings
+        vc.delegate = self
+    }
+    
+    func didSaveSettings(settings: GithubRepoSearchSettings) {
+        print("fish")
+        searchSettings = settings
+        tableView.reloadData()
+        print("potato")
+    }
+    
+    func didCancelSettings() {
+        
+    }
 }
