@@ -137,10 +137,8 @@ extension RepoResultsViewController: UISearchBarDelegate {
     }
     
     func didSaveSettings(settings: GithubRepoSearchSettings) {
-        print("fish")
         searchSettings = settings
         tableView.reloadData()
-        print("potato")
     }
     
     func didCancelSettings() {

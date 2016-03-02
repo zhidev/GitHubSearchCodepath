@@ -46,26 +46,21 @@ class SearchSettingsViewController: UIViewController {
     */
     @IBAction func sliderChanged(sender: AnyObject) {
         sender.setValue(Float(roundf(sender.value)), animated: false)
-        print("Break 1")
         newSettings = settings
         newSettings!.minStars = Int(slide.value)
-        print("break2")
         print(newSettings!.minStars)
         slideValue.text = String(newSettings!.minStars)
     }
     
     @IBAction func savePressed(sender: AnyObject) {
-        print("POTATOCHIPS")
         self.delegate?.didSaveSettings(newSettings!)
         self.dismissViewControllerAnimated(true, completion: nil)
-        print("save pressed")
     }
     
     
     @IBAction func cancelPressed(sender: AnyObject) {
         self.delegate?.didCancelSettings()
         self.dismissViewControllerAnimated(true, completion: nil)
-        print("cancel pressed")
     }
 
 }
